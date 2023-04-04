@@ -1,0 +1,40 @@
+.agregar{
+    border-color: greenyellow;
+    background-color: indigo;
+    color: chartreuse;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: medium;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 10px;
+    border: 4px solid;
+    font-weight: bold;
+}
+
+.agregar:hover{
+    cursor: pointer;
+    color: indigo;
+    background-color: greenyellow;
+    transition: 5ms;
+}
+
+.input{
+    border-radius: 25px;
+    font-size: large;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: greenyellow;
+    color: indigo;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 4px solid indigo;
+}
+
+
+
+.containerSearch{
+    background-image: url('https://images3.alphacoders.com/606/606020.jpg');
+    border-bottom: 2px solid black;
+}
