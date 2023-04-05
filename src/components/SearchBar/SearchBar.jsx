@@ -3,13 +3,15 @@ import style from './SearchBar.module.css';
 
 export default function SearchBar({ onSearch }) {
    const [id, setId] = useState('');
+   
    const handleChange = (event) => {
-      setId(event.target.value)
+      setId(event.target.value); 
+
    }
    return (
-      <div className = {style.containerSearch}>
+      <div>
          <input onChange = {handleChange} className = {style.input} type='search' value = {id} />
-         <button className = {style.agregar} onClick={() => onSearch(id)}>Agregar</button>
+         <button className = {style.agregar} onClick={() => {onSearch(id); setId('')}}>Agregar</button>
       </div>
    );
 }

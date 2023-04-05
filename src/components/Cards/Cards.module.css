@@ -2,6 +2,5 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-image: url('https://images3.alphacoders.com/812/812062.png');
     justify-content: space-evenly;
 }

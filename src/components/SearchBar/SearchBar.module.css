@@ -4,7 +4,7 @@
     color: chartreuse;
     padding: 10px;
     border-radius: 25px;
-    font-size: medium;
+    font-size: large;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 10px;
     border: 4px solid;
@@ -27,14 +27,7 @@
     color: indigo;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
     border: 4px solid indigo;
-}
-
-
-
-.containerSearch{
-    background-image: url('https://images3.alphacoders.com/606/606020.jpg');
-    border-bottom: 2px solid black;
 }
