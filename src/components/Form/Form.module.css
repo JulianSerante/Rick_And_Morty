@@ -1,0 +1,68 @@
+h1{
+    color: rgb(0, 202, 192);
+    text-shadow: 0 0 20px greenyellow;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+label{
+    color: rgb(0, 202, 192);
+    text-shadow: 0 0 5px greenyellow;
+    font-size: 22px;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.inputForm {
+    width: 60%;
+    height: 30px;
+    margin: 0.5rem;
+    font-size: medium;
+    box-shadow: 0 0 10px #4f9;
+    background-image: url('https://i.gifer.com/origin/7e/7e4abc8a38403620fdb573948aa5c9b1_w200.gif');
+    color: white;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+.ingresarButton {
+    padding: 0.3em 1em;
+    border-radius: 10px;
+    background: rgb(100, 200, 255);
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-family: 'Eczar', serif; 
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #4f9;
+    background-image: url('https://i.pinimg.com/originals/64/5c/8d/645c8d877f6e2aad7fa6545140c72a52.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+  }
+
+h5{
+    color: red;
+    font-size: 20px;
+    text-shadow: 0 0 3px black;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+.iniciaSesion{
+
+  color: rgb(0, 202, 192);
+  text-shadow: 0 0 20px greenyellow;
+  font-size: 30px;
+}

@@ -46,3 +46,12 @@ h2{
 }
 
 
+.nameLink{
+
+    display: flex;
+    
+
+    text-decoration: none;
+    
+
+}

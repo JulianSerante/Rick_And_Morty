@@ -1,4 +1,39 @@
 .containerNav{
     background-color: rgba(137, 43, 226, 0.504);
     border-bottom: 2px solid black;
+    padding-bottom: 30px;
 }
+
+.botonHome{
+    border: 1px solid black;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 0px 50px;
+
+    font-family: 'Eczar', serif; 
+    font-size: 15px;
+}
+
+.home{
+    margin: 2px;
+    text-decoration: none;
+    color: black;
+}
+
+.botonAbout{
+    border: 1px solid black;
+    border-radius: 30px;
+    margin: 10px;
+    margin-top: 30px;
+    padding: 0px 50px;
+
+    font-family: 'Eczar', serif; 
+    font-size: 15px;
+}
+
+.about{
+    margin: 2px;
+    text-decoration: none;
+    color: black;
+}
+
