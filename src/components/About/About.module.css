@@ -1,6 +1,6 @@
 .perfil{
     color: white;
-    font-size: 19px;
+    font-size: 25px;
 }
 
 .tittleProfile{
@@ -11,7 +11,7 @@
 }
 
 .aboutContainer{
-    margin-left: 100px;
+    margin-left: 50px;
     margin-right: 50px;
     margin-top: 20px;
     justify-content: center;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import validation from "./validation";
+import validation from "../Validation/validation";
 import style from './Form.module.css'
 
 
@@ -43,16 +43,15 @@ const Form = ({Login}) => {
         <div>
         <form onSubmit={handleSubmit} className={style.form} >
             <h1>BIENVENIDO A LA APP DE</h1>
-            <img src="https://www.icegif.com/wp-content/uploads/2022/06/icegif-519.gif" alt="" />
+            <img src="https://www.icegif.com/wp-content/uploads/2022/06/icegif-519.gif" alt="" className={style.imgRickYMorty} />
             <p className = {style.iniciaSesion} >Inicia sesión para ingresar</p>
             <label htmlFor="username">Email: </label>
             <input className = {style.inputForm} name="username" type="email" placeholder="Ingrese su email" value={userData.email} onChange={handleChange}/>
-            {errors.username && <h5>{errors.username}</h5>}
+            {errors.username && <h5 className={style.error}>{errors.username}</h5>}
             <br />
             <label htmlFor="password">Password: </label>
             <input className = {style.inputForm} name="password" type="password" placeholder="Ingrese su contraseña" value={userData.password} onChange={handleChange} />
-            {errors.password && <h5>{errors.password}</h5>}
-            <br />
+            {errors.password && <h5 className={style.error}>{errors.password}</h5>}
             <br />
             <button className = {style.ingresarButton}> Ingresar </button>
           

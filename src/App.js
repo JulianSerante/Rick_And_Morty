@@ -7,6 +7,8 @@ import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import About from './components/About/About';
 import Detail from './components/Detail/Detail';
 import Form from './components/Form/Form';
+import Favorites from './components/Favorites/Favorites';
+import style from './App.module.css';
 
 
 
@@ -24,10 +26,18 @@ function App() {
    const email = 'julian.serante@gmail.com'
    const password = 'pass2000'
 
-   useEffect(() => {
-      !access && navigate('/');
-   }, [access]);
+   const login = (userData) => {
+      if(userData.username === email && userData.password === password){
+         setAccess(true);
+         navigate('/home');
+      } else {
+         alert('Email o contraseña incorrecta')
+      }
+   }
 
+   useEffect(() => {
+      !access && navigate('/')
+   }, [access, navigate]);
 
 
    function onSearch(id) {
@@ -50,23 +60,16 @@ function App() {
 
    const { pathname } = useLocation()
 
-   const login = (userData) => {
-      if(userData.username === email && userData.password === password){
-         setAccess(true);
-         navigate('/home');
-      } else {
-         alert('Email o contraseña incorrecta')
-      }
-   }
-
    return (
       <>
-      {pathname !== '/' && <Nav onSearch={onSearch} />}
+      { 
+      pathname !== '/' && <Nav onSearch={onSearch} setAccess = {setAccess} />}
       <Routes>
          <Route path = '/' element = {<Form Login = {login} />} />
          <Route 
          path = "/home" 
-         element = {<Cards onClose={onClose} characters={characters} />} 
+         element = {<Cards onClose={onClose} characters={characters} />}
+         className = {style.routeHome} 
          />
          <Route 
          path = '/about' 
@@ -75,6 +78,10 @@ function App() {
          path = '/detail/:id'
          element = {<Detail />}
          />
+         <Route
+          path = '/favorites'
+          element = {<Favorites/>}
+          />
       </Routes>
       
       </>

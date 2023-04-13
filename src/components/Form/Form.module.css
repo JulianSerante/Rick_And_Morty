@@ -1,8 +1,13 @@
 h1{
+    margin-bottom: 0px;
     color: rgb(0, 202, 192);
     text-shadow: 0 0 20px greenyellow;
     font-size: 45px;
     font-weight: bold;
+}
+
+.imgRickYMorty{
+  margin:0%;
 }
 
 label{
@@ -51,13 +56,13 @@ form {
     background-size: cover;
   }
 
-h5{
+.error{
     color: red;
     font-size: 20px;
     text-shadow: 0 0 3px black;
     font-style: italic;
     font-weight: bold;
-
+    margin: 0px;
 }
 
 .iniciaSesion{
