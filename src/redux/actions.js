@@ -28,7 +28,7 @@ import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, RESET } from "./action-types";
     })
  }
 
- export const reset = () => {
+ export const reset = () => {       //Para el botón Reset
     return ({
         type: RESET,
     })

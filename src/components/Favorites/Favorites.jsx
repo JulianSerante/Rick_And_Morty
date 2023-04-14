@@ -1,5 +1,5 @@
 import Card from "../Card/Card";
-import { filterCards, orderCards, reset } from "../../redux/actions";
+import { filterCards, orderCards, /*reset*/ } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 
@@ -12,6 +12,7 @@ const Favorites = () => {
     const handleOrder = (event) => {
         event.preventDefault()
         dispatch(orderCards(event.target.value))
+        setAux(true);
 
     }
 
@@ -20,9 +21,9 @@ const Favorites = () => {
         dispatch(filterCards(event.target.value))
     }
 
-const resetButton = () => {
-    dispatch(reset())
-}
+// const resetButton = () => {
+//     dispatch(reset())
+// }
 
     return(
         <>
@@ -32,14 +33,14 @@ const resetButton = () => {
                 <option value="D">Descendente</option>
             </select>
 
-        <select name="gender" id="" onChange={handleFilter} defaultValue={'DEFAULT'}>
-            <option value="DEFAULT">Filtrar</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Genderless">Genderless</option>
-            <option value="unknown">unknown</option>
-        </select>
-        <button onClick={resetButton}>Reset</button>
+            <select name="gender" id="" onChange={handleFilter} defaultValue={'DEFAULT'}>
+                <option value="allCharacters">All Characters</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Genderless">Genderless</option>
+                <option value="unknown">unknown</option>
+            </select>
+        {/* <button onClick={resetButton}>Reset</button> (Botón Reset (hace lo mismo que all characters)) */}
 
             {
                 myFavorites.map(({id, name, status, species, gender, origin, image}) => {

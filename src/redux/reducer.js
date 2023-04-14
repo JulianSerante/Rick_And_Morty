@@ -1,8 +1,8 @@
-import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, RESET } from "./action-types";
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, /*RESET*/ } from "./action-types";
 
 const initialState = {
     myFavorites: [],
-    allCharacters: []
+    allCharactersFav: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -10,47 +10,45 @@ const reducer = (state = initialState, action) => {
         case ADD_FAV:
             return {
                 ...state,
-                myFavorites: [...state.allCharacters, action.payload],
-                allCharacters: [...state.allCharacters, action.payload]
+                myFavorites: [...state.allCharactersFav, action.payload],
+                allCharactersFav: [...state.allCharactersFav, action.payload]
             }
         
         case REMOVE_FAV:
-            const newFavorites = state.myFavorites.filter(character => character.id !== action.payload)
+            const newFavorites = state.myFavorites.filter(favorite => favorite.id !== action.payload)
 
             return {
                 ...state,
                 myFavorites: newFavorites,
-                allCharacters: newFavorites
+                allCharactersFav: newFavorites
             }
 
         case FILTER:
-            const newFilter = state.allCharacters.filter(character => character.gender === action.payload)
+            const newFilter = state.allCharactersFav.filter(character => character.gender === action.payload)
 
             return{
                 ...state,
-                myFavorites: newFilter
+                myFavorites: 
+                    action.payload === 'allCharacters'
+                    ? [...state.allCharactersFav]
+                    : newFilter
             }
 
-        case RESET:
-            return{
-                ...state,
-                myFavorites: [...state.allCharacters]
-            }
+        // case RESET:                  (BOTÓN RESET)
+        //     return{
+        //         ...state,
+        //         myFavorites: [...state.allCharactersFav]
+        //     }
 
         case ORDER:
-            const newOrder = state.allCharacters.sort((a, b) => {
-                if(a.id > b.id) {
-                    return "A" === action.payload ? 1 : -1
-                }
-                if(a.id < b.id) {
-                    return "D" === action.payload ? 1 : -1
-                }
-                return 0; 
-            })
+            const allCharactersFavCopy = [...state.allCharactersFav]
 
             return{
                 ...state,
-                myFavorites: newOrder,
+                myFavorites: 
+                    action.payload === "A"
+                    ? allCharactersFavCopy.sort((a, b) => a.id - b.id )
+                    : allCharactersFavCopy.sort((a, b) => b.id - a.id )
             }
 
         default:

@@ -31,13 +31,13 @@ const Nav = ({onSearch, setAccess}) => {
                 </button>
             </NavLink>
 
+            <button onClick={handleLogOut} className = {style.boton}>
+                Log Out
+            </button>
+
             <NavLink to = '/home' >
                 <img className={style.img} src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/19643055883023.5996f8afa3a8f.gif" alt="" />
             </NavLink>
-
-        <button onClick={handleLogOut} >
-            Log Out
-        </button>
 
 
             <SearchBar onSearch = {onSearch} />
