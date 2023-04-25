@@ -1,0 +1,30 @@
+.favorite{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-left: 10px;
+}
+
+.selectores{
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 2px 20px;
+    background-color: rgb(136, 255, 0);
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Eczar', serif; 
+}
+
+
+.selectores:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0 0 5px #4f9;
+    text-decoration: none;
+    background-color: azure;
+    border: 2px solid indigo;
+}

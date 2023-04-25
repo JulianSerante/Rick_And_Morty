@@ -1,4 +1,5 @@
 import Card from "../Card/Card";
+import style from './Favorites.module.css';
 import { filterCards, orderCards, /*reset*/ } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
@@ -27,13 +28,13 @@ const Favorites = () => {
 
     return(
         <>
-            <select name="order" id="" onChange={handleOrder} defaultValue={'DEFAULT'}>
+            <select name="order" id="" className={style.selectores} onChange={handleOrder} defaultValue={'DEFAULT'}>
                 <option value="DEFAULT">Ordenar</option>
                 <option value="A">Ascendente</option>
                 <option value="D">Descendente</option>
             </select>
 
-            <select name="gender" id="" onChange={handleFilter} defaultValue={'DEFAULT'}>
+            <select name="gender" id="" className={style.selectores} onChange={handleFilter} defaultValue={'DEFAULT'}>
                 <option value="allCharacters">All Characters</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -42,6 +43,7 @@ const Favorites = () => {
             </select>
         {/* <button onClick={resetButton}>Reset</button> (Botón Reset (hace lo mismo que all characters)) */}
 
+            <div className={style.favorites}>
             {
                 myFavorites.map(({id, name, status, species, gender, origin, image}) => {
                  return (
@@ -58,6 +60,7 @@ const Favorites = () => {
              )
             })
             }
+            </div>
         </>
     )
 }

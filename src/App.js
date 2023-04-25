@@ -12,9 +12,9 @@ import style from './App.module.css';
 
 
 
-const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
-const API_KEY = 'c56539222d95.9d1744d60d284cf1fa00';
-
+// const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
+// const API_KEY = 'c56539222d95.9d1744d60d284cf1fa00';
+const URL = 'http://localhost:3001/rickandmorty/login';
 
 function App() {
    
@@ -22,41 +22,48 @@ function App() {
 
    const navigate = useNavigate()
 
-   const [access, setAccess] = useState(false)
-   const email = 'julian.serante@gmail.com'
-   const password = 'pass2000'
+   const [access, setAccess] = useState(false);
 
-   const login = (userData) => {
-      if(userData.username === email && userData.password === password){
-         setAccess(true);
-         navigate('/home');
-      } else {
-         alert('Email o contraseña incorrecta')
-      }
+   const login = async (userData) => {
+
+      try{
+         const { username, password } = userData;
+         const{ data } = await axios(URL + `?email=${username}&password=${password}`)
+         const { access } = data;
+
+         setAccess(access);
+         access && navigate('/home');
+         
+      }  catch(error){
+      console.log(error.message);
    }
+}
 
    useEffect(() => {
       !access && navigate('/')
    }, [access, navigate]);
 
 
-   function onSearch(id) {
-      axios(`${URL_BASE}/${id}?key=${API_KEY}`)
-      .then(response => response.data)
-      .then((data) => {
-         if(data.name){
+const onSearch = async (id) => {
+
+      try{
+      const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+
+      if(data.name){
             setCharacters((oldChars) => [...oldChars, data]);
-         } else {
-            window.alert('¡No hay personajes con este ID!');
-         }
-      })
-   }
+         } 
+
+      } catch(error){
+         return alert('¡No hay personajes con este ID!');
+}
+}
 
    const onClose = (id) => {
       setCharacters((oldChars) => {
          return oldChars.filter((character) => character.id !== id)
       });
    }
+
 
    const { pathname } = useLocation()
 
@@ -87,6 +94,7 @@ function App() {
       </>
    );
 }
+
 
 export default App;
 

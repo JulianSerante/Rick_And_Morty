@@ -12,7 +12,9 @@ const Nav = ({onSearch, setAccess}) => {
 
     return (
         <nav className = {style.containerNav}>
-           
+
+            <div>
+            <SearchBar onSearch = {onSearch} />
             <NavLink to = '/home' className={style.navLink}>
                 <button className = {style.boton}>
                     <h3 className = {style.home}>Home</h3>
@@ -32,15 +34,13 @@ const Nav = ({onSearch, setAccess}) => {
             </NavLink>
 
             <button onClick={handleLogOut} className = {style.boton}>
-                Log Out
+                <h3 className = {style.logOut} >Log Out</h3>
             </button>
+            </div>
 
             <NavLink to = '/home' >
                 <img className={style.img} src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/19643055883023.5996f8afa3a8f.gif" alt="" />
             </NavLink>
-
-
-            <SearchBar onSearch = {onSearch} />
 
         </nav>
     )

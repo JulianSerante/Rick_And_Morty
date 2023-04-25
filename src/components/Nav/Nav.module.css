@@ -55,3 +55,10 @@
     width: 500px;
     
 }
+
+.logOut{
+    margin: 2px;
+    text-decoration: none;
+    color: darkred;
+    font-style: italic;
+}

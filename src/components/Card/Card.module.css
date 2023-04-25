@@ -97,3 +97,15 @@
     font-weight:100;
     color: white;
 }
+
+.corazon{
+    background: rgba(128, 128, 128, 0);
+    margin-left: 20px;
+    border: none;
+    font-size: 30px;
+}
+
+.corazon:hover{
+    cursor: pointer;
+
+}
