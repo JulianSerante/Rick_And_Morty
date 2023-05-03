@@ -1,0 +1,64 @@
+.containerNav{
+    background-color: black;
+    border-bottom: 2px solid black;
+}
+
+.boton{
+    border: 2px solid chartreuse;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 0px 50px;
+    font-family: 'Eczar', serif; 
+    font-size: 15px;
+}
+
+.boton:hover{
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0 0 20px #4f9;
+    text-decoration: none;
+    background-color: chartreuse;
+    border: 2px solid indigo;
+}
+
+.home{
+    
+    margin: 2px;
+    text-decoration: none;
+}
+
+.boton{
+    border-radius: 30px;
+    margin: 10px;
+    padding: 0px 50px;
+    font-family: 'Eczar', serif; 
+    font-size: 15px;
+}
+
+.about{
+    margin: 2px;
+    text-decoration: none;
+    color: black;
+}
+
+.navLink{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.img{
+    margin-left:80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 500px;
+    
+}
+
+.logOut{
+    margin: 2px;
+    text-decoration: none;
+    color: darkred;
+    font-style: italic;
+}

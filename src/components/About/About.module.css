@@ -1,0 +1,26 @@
+.perfil{
+    color: white;
+    font-size: 25px;
+}
+
+.tittleProfile{
+    color: rgb(0, 202, 192);
+    text-shadow: 0 0 10px green;
+    font-size: 35px;
+
+}
+
+.aboutContainer{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    justify-content: center;
+    background-image: url('https://thumbs.gfycat.com/OrnateSparklingGallinule-max-1mb.gif');
+    padding: 20px 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 20px #4f9;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}

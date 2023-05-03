@@ -1,0 +1,20 @@
+.detail{
+
+    color: white;
+    margin-left: 40px;
+    
+}
+
+.detailImg{
+    border-radius: 40px;
+    width: 500px;
+}
+
+.detailName{
+    font-size: 35px ;
+
+}
+
+p{
+    font-size: large;
+}
